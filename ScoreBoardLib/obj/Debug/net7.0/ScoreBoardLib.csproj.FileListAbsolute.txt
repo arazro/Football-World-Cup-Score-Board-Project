@@ -1,0 +1,11 @@
+C:\Source2\Football World Cup\ScoreBoardLib\bin\Debug\net7.0\ScoreBoardLib.deps.json
+C:\Source2\Football World Cup\ScoreBoardLib\bin\Debug\net7.0\ScoreBoardLib.dll
+C:\Source2\Football World Cup\ScoreBoardLib\bin\Debug\net7.0\ScoreBoardLib.pdb
+C:\Source2\Football World Cup\ScoreBoardLib\obj\Debug\net7.0\ScoreBoardLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Source2\Football World Cup\ScoreBoardLib\obj\Debug\net7.0\ScoreBoardLib.AssemblyInfoInputs.cache
+C:\Source2\Football World Cup\ScoreBoardLib\obj\Debug\net7.0\ScoreBoardLib.AssemblyInfo.cs
+C:\Source2\Football World Cup\ScoreBoardLib\obj\Debug\net7.0\ScoreBoardLib.csproj.CoreCompileInputs.cache
+C:\Source2\Football World Cup\ScoreBoardLib\obj\Debug\net7.0\ScoreBoardLib.dll
+C:\Source2\Football World Cup\ScoreBoardLib\obj\Debug\net7.0\refint\ScoreBoardLib.dll
+C:\Source2\Football World Cup\ScoreBoardLib\obj\Debug\net7.0\ScoreBoardLib.pdb
+C:\Source2\Football World Cup\ScoreBoardLib\obj\Debug\net7.0\ref\ScoreBoardLib.dll
