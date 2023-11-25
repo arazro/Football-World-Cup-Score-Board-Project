@@ -6,13 +6,15 @@ public class ScoreBoardServiceTests
 {
     private readonly Mock<IMatchRepository> mockRepository;
     private readonly Mock<ISortingStrategy> mockSortingStrategy;
+    private readonly Mock<IScoreBoardValidationService> validationService;
     private readonly ScoreBoardService scoreBoardService;
 
     public ScoreBoardServiceTests()
     {
         mockRepository = new Mock<IMatchRepository>();
         mockSortingStrategy = new Mock<ISortingStrategy>();
-        scoreBoardService = new ScoreBoardService(mockRepository.Object, mockSortingStrategy.Object);
+        validationService = new Mock<IScoreBoardValidationService>();
+        scoreBoardService = new ScoreBoardService(mockRepository.Object, mockSortingStrategy.Object, validationService.Object);
     }
 
     [Fact]
@@ -32,19 +34,58 @@ public class ScoreBoardServiceTests
     }
 
     [Fact]
-    public void FinishGame_ShouldRemoveGame()
+    public void StartGame_WithValidInput_ShouldAddMatch()
     {
         // Arrange
         string homeTeam = "HomeTeam";
         string awayTeam = "AwayTeam";
-        var match = new Match { HomeTeam = homeTeam, AwayTeam = awayTeam };
-        mockRepository.Setup(repo => repo.GetMatch(homeTeam, awayTeam)).Returns(match);
+
+        // Act
+        scoreBoardService.StartGame(homeTeam, awayTeam);
+
+        // Assert
+        mockRepository.Verify(r => r.AddMatch(It.IsAny<Match>()), Times.Once);
+    }
+
+    [Fact]
+    public void StartGame_WithInvalidTeamNames_ShouldThrowArgumentException()
+    {
+        validationService.Setup(v => v.ValidateTeamNames(It.IsAny<string>(), It.IsAny<string>()))
+                             .Throws(new ArgumentException(MessageCenter.InvalidTeamNames));
+
+        Assert.Throws<ArgumentException>(() => scoreBoardService.StartGame("", "AwayTeam"));
+        Assert.Throws<ArgumentException>(() => scoreBoardService.StartGame("HomeTeam", ""));
+
+        validationService.Verify(v => v.ValidateTeamNames(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
+    }
+
+    [Fact]
+    public void FinishGame_ExistingGame_ShouldRemoveMatch()
+    {
+        // Arrange
+        string homeTeam = "HomeTeam";
+        string awayTeam = "AwayTeam";
+        Match match = new Match(homeTeam, awayTeam, 0, 0, DateTime.Now);
+        mockRepository.Setup(r => r.GetMatch(homeTeam, awayTeam)).Returns(match);
 
         // Act
         scoreBoardService.FinishGame(homeTeam, awayTeam);
 
         // Assert
-        mockRepository.Verify(repo => repo.RemoveMatch(match), Times.Once);
+        mockRepository.Verify(r => r.RemoveMatch(match), Times.Once);
+    }
+
+    [Fact]
+    public void FinishGame_NonExistingGame_ShouldNotThrowException()
+    {
+        // Setup the repository to return null for a non-existing game
+        mockRepository.Setup(repo => repo.GetMatch(It.IsAny<string>(), It.IsAny<string>())).Returns((Match)null);
+
+        // Act
+        Exception ex = Record.Exception(() => scoreBoardService.FinishGame("NonExistentHome", "NonExistentAway"));
+
+        // Assert
+        Assert.Null(ex); // No exception should be thrown
     }
 
     [Fact]
@@ -53,7 +94,7 @@ public class ScoreBoardServiceTests
         // Arrange
         string homeTeam = "HomeTeam";
         string awayTeam = "AwayTeam";
-        var match = new Match { HomeTeam = homeTeam, AwayTeam = awayTeam };
+        var match = new Match(homeTeam, awayTeam, 0, 0, DateTime.Now);
         mockRepository.Setup(repo => repo.GetMatch(homeTeam, awayTeam)).Returns(match);
 
         // Act
@@ -65,16 +106,21 @@ public class ScoreBoardServiceTests
     }
 
     [Fact]
-    public void UpdateScore_NonExistingGame_ShouldHandleGracefully()
+    public void UpdateScore_WithInvalidTeamNames_ShouldThrowArgumentException()
     {
-        // Arrange
-        string homeTeam = "NonExistingHome";
-        string awayTeam = "NonExistingAway";
-        mockRepository.Setup(repo => repo.GetMatch(homeTeam, awayTeam)).Returns((Match)null);
+        validationService.Setup(v => v.ValidateTeamNames(It.IsAny<string>(), It.IsAny<string>()))
+                              .Throws(new ArgumentException(MessageCenter.InvalidTeamNames));
 
-        // Act & Assert
-        Exception ex = Record.Exception(() => scoreBoardService.UpdateScore(homeTeam, awayTeam, 1, 1));
-        Assert.Null(ex); // No exception should be thrown
+        // Act & Assert for empty or null home team name
+        Assert.Throws<ArgumentException>(() => scoreBoardService.UpdateScore("", "AwayTeam", 1, 0));
+        Assert.Throws<ArgumentException>(() => scoreBoardService.UpdateScore(null, "AwayTeam", 1, 0));
+
+        // Act & Assert for empty or null away team name
+        Assert.Throws<ArgumentException>(() => scoreBoardService.UpdateScore("HomeTeam", "", 1, 0));
+        Assert.Throws<ArgumentException>(() => scoreBoardService.UpdateScore("HomeTeam", null, 1, 0));
+
+        // Verify that the validation service is being called with the provided parameters
+        validationService.Verify(v => v.ValidateTeamNames(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(4));
     }
 
     [Fact]
@@ -91,15 +137,5 @@ public class ScoreBoardServiceTests
         // Assert
         Assert.Equal(matches, summary);
         mockSortingStrategy.Verify(strategy => strategy.Sort(matches), Times.Once);
-    }
-
-    [Fact]
-    public void StartGame_WithInvalidTeamNames_ShouldThrowArgumentException()
-    {
-        // Act & Assert for empty home team name
-        Assert.Throws<ArgumentException>(() => scoreBoardService.StartGame("", "AwayTeam"));
-
-        // Act & Assert for empty away team name
-        Assert.Throws<ArgumentException>(() => scoreBoardService.StartGame("HomeTeam", ""));
     }
 }

@@ -6,6 +6,7 @@ public static class ScoreBoardServiceFactory
     {
         var matchRepository = new InMemoryMatchRepository();
         var sortingStrategy = new TotalScoreSortingStrategy();
-        return new ScoreBoardService(matchRepository, sortingStrategy);
+        var scoreBoardValidation = new ScoreBoardValidationService();
+        return new ScoreBoardService(matchRepository, sortingStrategy, scoreBoardValidation);
     }
 }

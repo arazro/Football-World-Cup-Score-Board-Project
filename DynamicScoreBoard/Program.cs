@@ -6,7 +6,8 @@ public class Program
     {
         IMatchRepository matchRepository = new InMemoryMatchRepository();
         ISortingStrategy sortingStrategy = new TotalScoreSortingStrategy();
-        IScoreBoard scoreBoard = new ScoreBoardService(matchRepository, sortingStrategy);
+        var scoreBoardValidation = new ScoreBoardValidationService();
+        IScoreBoard scoreBoard = new ScoreBoardService(matchRepository, sortingStrategy, scoreBoardValidation);
 
         bool exit = false;
         while (!exit)

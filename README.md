@@ -42,13 +42,22 @@ Strategy Pattern: Defines sorting strategies in ScoreBoardLib.
 Factory Pattern: Used in the dynamic console application for creating ScoreBoardService instances.
 Builder Pattern (Test Data Builder): Creates complex test objects in ScoreBoardLib.Tests.
 Dependency Injection: Employed in ScoreBoardService for injecting dependencies.
+
 Usage
+Building the Program
+To build the console applications and the library, navigate to the root directory of the project and run:
+
+dotnet build
+This command compiles the project and its dependencies.
+
 Running the Console Applications
-Compile and run the desired console application.
+To run a console application, navigate to the respective project directory and execute:
+
+dotnet run
 Follow the menu-driven interface to interact with the score board.
-Using ScoreBoardLib in Your Project
-Reference ScoreBoardLib.
-Initialize ScoreBoardService with necessary dependencies.
-Use ScoreBoardService methods to manage and retrieve match data.
+
 Testing
-Execute tests in ScoreBoardLib.Tests to validate ScoreBoardLib functionality. Tests cover various scenarios, adhering to TDD principles.
+To run the tests in ScoreBoardLib.Tests, navigate to the test project directory and execute:
+
+dotnet test
+This command will run all the unit tests in the project, outputting the results to the console.

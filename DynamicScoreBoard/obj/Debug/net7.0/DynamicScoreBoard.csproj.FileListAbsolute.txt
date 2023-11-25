@@ -16,3 +16,21 @@ C:\Source2\Football World Cup\DynamicScoreBoard\obj\Debug\net7.0\refint\DynamicS
 C:\Source2\Football World Cup\DynamicScoreBoard\obj\Debug\net7.0\DynamicScoreBoard.pdb
 C:\Source2\Football World Cup\DynamicScoreBoard\obj\Debug\net7.0\DynamicScoreBoard.genruntimeconfig.cache
 C:\Source2\Football World Cup\DynamicScoreBoard\obj\Debug\net7.0\ref\DynamicScoreBoard.dll
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\bin\Debug\net7.0\DynamicScoreBoard.exe
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\bin\Debug\net7.0\DynamicScoreBoard.deps.json
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\bin\Debug\net7.0\DynamicScoreBoard.runtimeconfig.json
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\bin\Debug\net7.0\DynamicScoreBoard.dll
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\bin\Debug\net7.0\DynamicScoreBoard.pdb
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\bin\Debug\net7.0\ScoreBoardLib.dll
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\bin\Debug\net7.0\ScoreBoardLib.pdb
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\obj\Debug\net7.0\DynamicScoreBoard.csproj.AssemblyReference.cache
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\obj\Debug\net7.0\DynamicScoreBoard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\obj\Debug\net7.0\DynamicScoreBoard.AssemblyInfoInputs.cache
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\obj\Debug\net7.0\DynamicScoreBoard.AssemblyInfo.cs
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\obj\Debug\net7.0\DynamicScoreBoard.csproj.CoreCompileInputs.cache
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\obj\Debug\net7.0\DynamicScoreBoard.csproj.CopyComplete
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\obj\Debug\net7.0\DynamicScoreBoard.dll
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\obj\Debug\net7.0\refint\DynamicScoreBoard.dll
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\obj\Debug\net7.0\DynamicScoreBoard.pdb
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\obj\Debug\net7.0\DynamicScoreBoard.genruntimeconfig.cache
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\DynamicScoreBoard\obj\Debug\net7.0\ref\DynamicScoreBoard.dll

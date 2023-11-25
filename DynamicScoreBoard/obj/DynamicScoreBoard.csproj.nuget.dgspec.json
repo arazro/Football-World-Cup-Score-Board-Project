@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Source2\\Football World Cup\\DynamicScoreBoard\\DynamicScoreBoard.csproj": {}
+    "C:\\Users\\arazr\\Documents\\GitHub\\Football-World-Cup-Score-Board-Project\\DynamicScoreBoard\\DynamicScoreBoard.csproj": {}
   },
   "projects": {
-    "C:\\Source2\\Football World Cup\\DynamicScoreBoard\\DynamicScoreBoard.csproj": {
+    "C:\\Users\\arazr\\Documents\\GitHub\\Football-World-Cup-Score-Board-Project\\DynamicScoreBoard\\DynamicScoreBoard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Source2\\Football World Cup\\DynamicScoreBoard\\DynamicScoreBoard.csproj",
+        "projectUniqueName": "C:\\Users\\arazr\\Documents\\GitHub\\Football-World-Cup-Score-Board-Project\\DynamicScoreBoard\\DynamicScoreBoard.csproj",
         "projectName": "DynamicScoreBoard",
-        "projectPath": "C:\\Source2\\Football World Cup\\DynamicScoreBoard\\DynamicScoreBoard.csproj",
+        "projectPath": "C:\\Users\\arazr\\Documents\\GitHub\\Football-World-Cup-Score-Board-Project\\DynamicScoreBoard\\DynamicScoreBoard.csproj",
         "packagesPath": "C:\\Users\\arazr\\.nuget\\packages\\",
-        "outputPath": "C:\\Source2\\Football World Cup\\DynamicScoreBoard\\obj\\",
+        "outputPath": "C:\\Users\\arazr\\Documents\\GitHub\\Football-World-Cup-Score-Board-Project\\DynamicScoreBoard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -34,8 +34,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Source2\\Football World Cup\\ScoreBoardLib\\ScoreBoardLib.csproj": {
-                "projectPath": "C:\\Source2\\Football World Cup\\ScoreBoardLib\\ScoreBoardLib.csproj"
+              "C:\\Users\\arazr\\Documents\\GitHub\\Football-World-Cup-Score-Board-Project\\ScoreBoardLib\\ScoreBoardLib.csproj": {
+                "projectPath": "C:\\Users\\arazr\\Documents\\GitHub\\Football-World-Cup-Score-Board-Project\\ScoreBoardLib\\ScoreBoardLib.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Source2\\Football World Cup\\ScoreBoardLib\\ScoreBoardLib.csproj": {
+    "C:\\Users\\arazr\\Documents\\GitHub\\Football-World-Cup-Score-Board-Project\\ScoreBoardLib\\ScoreBoardLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Source2\\Football World Cup\\ScoreBoardLib\\ScoreBoardLib.csproj",
+        "projectUniqueName": "C:\\Users\\arazr\\Documents\\GitHub\\Football-World-Cup-Score-Board-Project\\ScoreBoardLib\\ScoreBoardLib.csproj",
         "projectName": "ScoreBoardLib",
-        "projectPath": "C:\\Source2\\Football World Cup\\ScoreBoardLib\\ScoreBoardLib.csproj",
+        "projectPath": "C:\\Users\\arazr\\Documents\\GitHub\\Football-World-Cup-Score-Board-Project\\ScoreBoardLib\\ScoreBoardLib.csproj",
         "packagesPath": "C:\\Users\\arazr\\.nuget\\packages\\",
-        "outputPath": "C:\\Source2\\Football World Cup\\ScoreBoardLib\\obj\\",
+        "outputPath": "C:\\Users\\arazr\\Documents\\GitHub\\Football-World-Cup-Score-Board-Project\\ScoreBoardLib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

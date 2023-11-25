@@ -7,9 +7,10 @@ public class Program
         // Setting up dependencies
         IMatchRepository matchRepository = new InMemoryMatchRepository();
         ISortingStrategy sortingStrategy = new TotalScoreSortingStrategy();
+        var scoreBoardValidation = new ScoreBoardValidationService();
 
         // Creating ScoreBoardService with dependencies
-        IScoreBoard scoreBoard = new ScoreBoardService(matchRepository, sortingStrategy);
+        IScoreBoard scoreBoard = new ScoreBoardService(matchRepository, sortingStrategy, scoreBoardValidation);
 
         // Sample data
         scoreBoard.StartGame("Mexico", "Canada");

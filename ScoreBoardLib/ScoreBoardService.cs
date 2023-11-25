@@ -4,43 +4,42 @@ public class ScoreBoardService : IScoreBoard
 {
     private readonly IMatchRepository matchRepository;
     private readonly ISortingStrategy sortingStrategy;
+    private readonly IScoreBoardValidationService validationService;
 
-    public ScoreBoardService(IMatchRepository matchRepository, ISortingStrategy sortingStrategy)
+    public ScoreBoardService(IMatchRepository matchRepository, ISortingStrategy sortingStrategy, IScoreBoardValidationService validationService)
     {
-        this.matchRepository = matchRepository ?? throw new ArgumentNullException(nameof(matchRepository));
-        this.sortingStrategy = sortingStrategy ?? throw new ArgumentNullException(nameof(sortingStrategy));
+        this.matchRepository = matchRepository;
+        this.sortingStrategy = sortingStrategy;
+        this.validationService = validationService;
     }
 
     public void StartGame(string homeTeam, string awayTeam)
     {
-        if (string.IsNullOrWhiteSpace(homeTeam) || string.IsNullOrWhiteSpace(awayTeam))
-        {
-            throw new ArgumentException("Team names cannot be null or empty.");
-        }
-
-        var match = new Match
-        {
-            HomeTeam = homeTeam,
-            AwayTeam = awayTeam,
-            HomeScore = 0,
-            AwayScore = 0,
-            StartTime = DateTime.Now
-        };
-
+        validationService.ValidateTeamNames(homeTeam, awayTeam);
+        var match = new Match(homeTeam, awayTeam, 0, 0, DateTime.Now);
         matchRepository.AddMatch(match);
     }
 
     public void FinishGame(string homeTeam, string awayTeam)
     {
+        validationService.ValidateTeamNames(homeTeam, awayTeam);
+
         var match = matchRepository.GetMatch(homeTeam, awayTeam);
         if (match != null)
         {
             matchRepository.RemoveMatch(match);
         }
+        else
+        {
+            Console.WriteLine(MessageCenter.NonExistentGame);
+        }
     }
 
     public void UpdateScore(string homeTeam, string awayTeam, int homeScore, int awayScore)
     {
+        validationService.ValidateTeamNames(homeTeam, awayTeam);
+        validationService.ValidateScores(homeScore, awayScore);
+
         var match = matchRepository.GetMatch(homeTeam, awayTeam);
         if (match != null)
         {

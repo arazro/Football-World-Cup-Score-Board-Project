@@ -16,3 +16,21 @@ C:\Source2\Football World Cup\ScoreBoard\obj\Debug\net7.0\refint\ScoreBoard.dll
 C:\Source2\Football World Cup\ScoreBoard\obj\Debug\net7.0\ScoreBoard.pdb
 C:\Source2\Football World Cup\ScoreBoard\obj\Debug\net7.0\ScoreBoard.genruntimeconfig.cache
 C:\Source2\Football World Cup\ScoreBoard\obj\Debug\net7.0\ref\ScoreBoard.dll
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\bin\Debug\net7.0\ScoreBoard.exe
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\bin\Debug\net7.0\ScoreBoard.deps.json
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\bin\Debug\net7.0\ScoreBoard.runtimeconfig.json
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\bin\Debug\net7.0\ScoreBoard.dll
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\bin\Debug\net7.0\ScoreBoard.pdb
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\bin\Debug\net7.0\ScoreBoardLib.dll
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\bin\Debug\net7.0\ScoreBoardLib.pdb
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\obj\Debug\net7.0\ScoreBoard.csproj.AssemblyReference.cache
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\obj\Debug\net7.0\ScoreBoard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\obj\Debug\net7.0\ScoreBoard.AssemblyInfoInputs.cache
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\obj\Debug\net7.0\ScoreBoard.AssemblyInfo.cs
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\obj\Debug\net7.0\ScoreBoard.csproj.CoreCompileInputs.cache
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\obj\Debug\net7.0\ScoreBoard.csproj.CopyComplete
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\obj\Debug\net7.0\ScoreBoard.dll
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\obj\Debug\net7.0\refint\ScoreBoard.dll
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\obj\Debug\net7.0\ScoreBoard.pdb
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\obj\Debug\net7.0\ScoreBoard.genruntimeconfig.cache
+C:\Users\arazr\Documents\GitHub\Football-World-Cup-Score-Board-Project\ScoreBoard\obj\Debug\net7.0\ref\ScoreBoard.dll

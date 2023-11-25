@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Source2\\Football World Cup\\ScoreBoardLib\\ScoreBoardLib.csproj",
+      "projectUniqueName": "C:\\Users\\arazr\\Documents\\GitHub\\Football-World-Cup-Score-Board-Project\\ScoreBoardLib\\ScoreBoardLib.csproj",
       "projectName": "ScoreBoardLib",
-      "projectPath": "C:\\Source2\\Football World Cup\\ScoreBoardLib\\ScoreBoardLib.csproj",
+      "projectPath": "C:\\Users\\arazr\\Documents\\GitHub\\Football-World-Cup-Score-Board-Project\\ScoreBoardLib\\ScoreBoardLib.csproj",
       "packagesPath": "C:\\Users\\arazr\\.nuget\\packages\\",
-      "outputPath": "C:\\Source2\\Football World Cup\\ScoreBoardLib\\obj\\",
+      "outputPath": "C:\\Users\\arazr\\Documents\\GitHub\\Football-World-Cup-Score-Board-Project\\ScoreBoardLib\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
